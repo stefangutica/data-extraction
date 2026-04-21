@@ -5,9 +5,9 @@ import { parse } from 'csv-parse/sync';
 const API_URL = 'http://localhost:3000/api/match-company';
 
 interface InputRow {
-  'input_name': string;
-  'input_phone': string;
-  'input_website': string;
+  'input name': string;
+  'input phone': string;
+  'input website': string;
   'input_facebook': string;
 }
 
@@ -42,9 +42,9 @@ async function runMatcher() {
   // 2. Iterate through each row sequentially
   for (const [index, row] of records.entries()) {
     const payload = {
-      name: row['input_name'] || null,
-      phone_number: row['input_phone'] || null,
-      website: row['input_website'] || null,
+      name: row['input name'] || null,
+      phone_number: row['input phone'] || null,
+      website: row['input website'] || null,
       facebook_profile: row['input_facebook'] || null,
     };
 

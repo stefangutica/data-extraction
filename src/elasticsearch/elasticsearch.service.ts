@@ -76,7 +76,7 @@ export class ElasticsearchService {
 		});
 	}
 
-	async syncFromLocalFiles(): Promise<SyncSummary> {
+	async mergeAndIndexCompanies(): Promise<SyncSummary> {
 		const startedAt = Date.now();
 		const csvPath = path.resolve(process.cwd(), this.csvInputRelativePath);
 		const jsonPath = path.resolve(process.cwd(), this.jsonInputRelativePath);

@@ -51,7 +51,7 @@ export class ElasticsearchController {
 		return company;
 	}
 
-	@Post('sync')
+	@Post('merge-and-index')
 	@HttpCode(HttpStatus.OK)
 	@ApiOperation({
 		summary:
@@ -59,7 +59,7 @@ export class ElasticsearchController {
 	})
 	@ApiResponse({ status: 200, description: 'Sync summary returned' })
 	@ApiResponse({ status: 500, description: 'File read / Elasticsearch indexing error' })
-	async sync() {
-		return this.elasticsearchService.syncFromLocalFiles();
+	async mergeAndIndex() {
+		return this.elasticsearchService.mergeAndIndexCompanies();
 	}
 }

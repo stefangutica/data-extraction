@@ -7,7 +7,8 @@ import {
 	Post,
 } from '@nestjs/common';
 import { ApiBody, ApiOperation, ApiResponse, ApiTags } from '@nestjs/swagger';
-import { ElasticsearchService, MatchCompanyPayload } from './elasticsearch.service';
+import { ElasticsearchService } from './elasticsearch.service';
+import { MatchCompanyPayload } from './entities/company.types';
 
 @ApiTags('entity-resolution')
 @Controller()

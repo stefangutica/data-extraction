@@ -12,7 +12,6 @@
     "start:dev": "nest start --watch",
     "start:debug": "nest start --debug --watch",
     "start:prod": "node dist/main",
-    "setup:node-postal": "bash scripts/setup-node-postal.sh",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
     "test": "jest",
     "test:watch": "jest --watch",
@@ -21,7 +20,7 @@
     "test:e2e": "jest --config ./test/jest-e2e.json"
   },
   "dependencies": {
-    "@elastic/elasticsearch": "^9.3.4",
+    "@elastic/elasticsearch": "^8.10.0",
     "@multiversx/sdk-nestjs": "^0.5.5",
     "@nestjs/axios": "^3.1.3",
     "@nestjs/cache-manager": "^2.3.0",
@@ -34,6 +33,7 @@
     "cache-manager-ioredis-yet": "^2.1.2",
     "cheerio": "^1.1.0",
     "csv-parse": "^6.2.1",
+    "csv-stringify": "^6.7.0",
     "got-scraping": "^4.2.1",
     "ioredis": "^5.10.1",
     "libphonenumber-js": "^1.12.41",
@@ -48,7 +48,7 @@
     "@nestjs/testing": "^9.4.3",
     "@types/express": "^5.0.0",
     "@types/jest": "^29.5.2",
-    "@types/node": "^20.3.1",
+    "@types/node": "^20.19.39",
     "@types/supertest": "^6.0.0",
     "@typescript-eslint/eslint-plugin": "^8.0.0",
     "@typescript-eslint/parser": "^8.0.0",
@@ -61,9 +61,9 @@
     "supertest": "^7.0.0",
     "ts-jest": "^29.1.0",
     "ts-loader": "^9.4.3",
-    "ts-node": "^10.9.1",
+    "ts-node": "^10.9.2",
     "tsconfig-paths": "^4.2.0",
-    "typescript": "^5.1.3",
+    "typescript": "^5.9.3",
     "webpack": "^5.106.2"
   },
   "jest": {
